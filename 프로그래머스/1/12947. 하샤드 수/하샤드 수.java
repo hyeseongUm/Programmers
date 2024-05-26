@@ -1,10 +1,10 @@
 class Solution {
     public boolean solution(int x) {
         int sum = 0;
-        String str = x+"";
-        
-        for (int i = 0; i < str.length(); i++) {
-           sum+=Integer.parseInt(String.valueOf(str.charAt(i)));
+        int x2 = x;
+        while (x2>0){
+            sum += x2%10;
+            x2 = x2/10;
         }
         return x % sum == 0;
     }
